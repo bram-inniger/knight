@@ -12,7 +12,7 @@ public class Move {
         this.horizontalOffset = horizontalOffset;
     }
 
-    public static Move of(VerticalOffset verticalOffset, HorizontalOffset horizontalOffset) {
+    public static Move move(VerticalOffset verticalOffset, HorizontalOffset horizontalOffset) {
         return new Move(verticalOffset.getNumericValue(), horizontalOffset.getNumericValue());
     }
 

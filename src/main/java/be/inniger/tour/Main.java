@@ -1,4 +1,4 @@
-package be.inniger.knight;
+package be.inniger.tour;
 
 import java.util.List;
 

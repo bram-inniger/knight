@@ -2,10 +2,11 @@ package be.inniger.tour.dirty;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Deque;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,7 +27,7 @@ public class Tour {
     private static final int NR_ROWS = 8;
     private static final int NR_COLS = 8;
 
-    private static final Set<Move> MOVES = Set.of(
+    private static final Collection<Move> MOVES = List.of(
             Move.of(2, 1),
             Move.of(1, 2),
             Move.of(-1, 2),

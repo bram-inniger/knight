@@ -1,31 +1,17 @@
 package be.inniger.tour;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
 // Mutable and ugly
 public class Board {
 
-    private final int nrRows;
-    private final int nrCols;
     private final int[][] board;
 
-    public Board(int nrRows, int nrCols) {
-        this.nrRows = nrRows;
-        this.nrCols = nrCols;
-        this.board = new int[nrRows][nrCols];
-    }
-
-    public void print() {
-        Stream.of(board)
-                .map(Arrays::toString)
-                .forEach(System.out::println);
-        System.out.println();
+    public Board() {
+        this.board = new int[Constants.NR_ROWS][Constants.NR_COLS];
     }
 
     public boolean canMark(int row, int col) {
-        return row < nrRows && row >= 0 &&
-                col < nrCols && col >= 0 &&
+        return row >= 0 && row < Constants.NR_ROWS &&
+                col >= 0 && col < Constants.NR_COLS &&
                 board[row][col] == 0;
     }
 
@@ -41,8 +27,8 @@ public class Board {
 //        return Stream.of(board)
 //                .flatMapToInt(Arrays::stream)
 //                .noneMatch(i -> i == 0);
-        for (int row = 0; row < nrRows; row++) {
-            for (int col = 0; col < nrCols; col++) {
+        for (int row = 0; row < Constants.NR_ROWS; row++) {
+            for (int col = 0; col < Constants.NR_COLS; col++) {
                 if (board[row][col] == 0) {
                     return false;
                 }

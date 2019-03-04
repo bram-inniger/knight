@@ -1,4 +1,4 @@
-package be.inniger.tour.dirty;
+package be.inniger.tour;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -15,18 +15,12 @@ public class Board {
         this.nrCols = nrCols;
         this.board = new int[nrRows][nrCols];
     }
-    
+
     public void print() {
         Stream.of(board)
                 .map(Arrays::toString)
                 .forEach(System.out::println);
         System.out.println();
-    }
-
-    public static void main(String[] args) {
-        Board board = new Board(5, 5);
-        board.print();
-        System.out.println(board.isSolved());
     }
 
     public boolean canMark(int row, int col) {
@@ -54,7 +48,7 @@ public class Board {
                 }
             }
         }
-        
+
         return true;
     }
 }

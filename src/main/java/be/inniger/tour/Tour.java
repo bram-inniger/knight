@@ -1,4 +1,4 @@
-package be.inniger.tour.dirty;
+package be.inniger.tour;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

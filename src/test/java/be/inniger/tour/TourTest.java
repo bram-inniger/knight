@@ -7,11 +7,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class MainTest {
+// FIXME, add proper test
+class TourTest {
 
     @Test
-    void getNumbers() {
-        List<Integer> numbers = new Main().getNumbers();
+    void fixme() {
+        List<Integer> numbers = List.of(1, 2);
 
         assertEquals((Integer) 1, numbers.get(0));
         assertNotEquals((Integer) 1, numbers.get(1));

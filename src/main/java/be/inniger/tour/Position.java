@@ -3,7 +3,7 @@ package be.inniger.tour;
 import java.util.HashMap;
 import java.util.Map;
 
-class Position {
+public class Position {
 
     private static final Map<Integer, Position> POSITIONS_CACHE = new HashMap<>();
 
